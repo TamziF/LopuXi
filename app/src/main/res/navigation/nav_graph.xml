@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/authorization">
+
+    <fragment
+        android:id="@+id/authorization"
+        android:name="com.example.lopuxi.authoregistration.Authorization"
+        android:label="fragment_authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorization_to_registration"
+            app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_authorization_to_feed"
+            app:destination="@id/feed" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.lopuxi.authoregistration.Registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registration_to_feed"
+            app:destination="@id/feed" />
+    </fragment>
+    <fragment
+        android:id="@+id/feed"
+        android:name="com.example.lopuxi.mainpart.Feed"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" />
+</navigation>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".authoregistration.Authorization">
+
+    <data>
+        <variable
+            name="sharedViewModel"
+            type="com.example.lopuxi.authoregistration.AuthorizationRegistrationViewModel" />
+        <variable
+            name="authorizationFragment"
+            type="com.example.lopuxi.authoregistration.Authorization" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/authorization_email_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="256dp"
+            android:gravity="center"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:minWidth="168dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/authorization_password_et"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/authorization_password_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:minWidth="168dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/sign_in_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/authorization_email_et" />
+
+        <Button
+            android:id="@+id/sign_in_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:enabled="@{sharedViewModel.showAuthButton}"
+            android:text="Sign In"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/no_account_question_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/authorization_password_et" />
+
+        <TextView
+            android:id="@+id/no_account_question_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no account?"
+            app:layout_constraintBottom_toTopOf="@id/to_sign_up_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/to_sign_up_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Sign_Up"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_in_btn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

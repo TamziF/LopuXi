@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="12dp"
     app:cardCornerRadius="16dp"
-    app:cardBackgroundColor="@color/teal_200">
+    app:cardBackgroundColor="@color/purple_200">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

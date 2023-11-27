@@ -5,9 +5,11 @@
     tools:context=".authoregistration.Authorization">
 
     <data>
+
         <variable
             name="sharedViewModel"
             type="com.example.lopuxi.authoregistration.AuthorizationRegistrationViewModel" />
+
         <variable
             name="authorizationFragment"
             type="com.example.lopuxi.authoregistration.Authorization" />
@@ -23,10 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="256dp"
             android:gravity="center"
-            android:hint="email"
-            android:inputType="textEmailAddress"
+            android:hint="username"
+            android:inputType="textPersonName"
             android:minWidth="168dp"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@id/authorization_password_et"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,9 +41,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:hint="password"
+            android:textColor="?attr/colorOnSecondary"
             android:inputType="textPassword"
             android:minWidth="168dp"
-            android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@id/sign_in_btn"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +81,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sign_in_btn"/>
+            app:layout_constraintTop_toBottomOf="@id/sign_in_btn" />
+
+        <ImageView
+            android:id="@+id/status_image"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/sign_in_btn"
+            app:layout_constraintEnd_toEndOf="@id/sign_in_btn"
+            app:layout_constraintStart_toStartOf="@id/sign_in_btn"
+            app:layout_constraintTop_toTopOf="@id/sign_in_btn"
+            app:srcCompat="@drawable/loading_animation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
